@@ -28,7 +28,7 @@ import androidx.compose.ui.unit.dp
 import androidx.constraintlayout.compose.ConstraintLayout
 import androidx.constraintlayout.compose.ConstraintSet
 import androidx.constraintlayout.compose.Dimension
-import com.codelab.layouts.ui.LayoutsCodelabTheme
+import com.codelab.layouts.tools.LayoutsCodelabTheme
 
 @Composable
 fun ConstraintLayoutContent() {

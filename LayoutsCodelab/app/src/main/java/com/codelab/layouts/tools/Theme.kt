@@ -14,24 +14,38 @@
  * limitations under the License.
  */
 
-package com.codelab.layouts.ui
+package com.codelab.layouts.tools
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
+import androidx.compose.material.Typography
 import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.text.TextStyle
+import androidx.compose.ui.text.font.Font
+import androidx.compose.ui.text.font.FontFamily
+import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.sp
+import com.codelab.layouts.R
+
+
+val Inter = FontFamily(
+    Font(R.font.inter_regular),
+    Font(R.font.inter_medium, FontWeight.W500),
+    Font(R.font.inter_bold, FontWeight.Bold)
+)
 
 private val DarkColorPalette = darkColors(
-    primary = purple200,
-    primaryVariant = purple700,
-    secondary = teal200
+    primary = green,
+    primaryVariant = green,
+    secondary = green
 )
 
 private val LightColorPalette = lightColors(
-    primary = purple500,
-    primaryVariant = purple700,
-    secondary = teal200
+    primary = green,
+    primaryVariant = green,
+    secondary = green
 
     /* Other default colors to override
     background = Color.White,
@@ -43,6 +57,42 @@ private val LightColorPalette = lightColors(
     */
 )
 
+// Set of Material typography styles to start with
+val typography = Typography(
+    h1 = TextStyle(
+        fontFamily = Inter,
+        fontWeight = FontWeight.Bold,
+        fontSize =35.sp
+    ),
+    body1 = TextStyle(
+        fontFamily = Inter,
+        fontWeight = FontWeight.Normal,
+        fontSize = 20.sp
+    ),
+    body2 = TextStyle(
+        fontFamily = Inter,
+        fontWeight = FontWeight.Normal,
+        fontSize = 14.sp
+    ),
+    h3 = TextStyle(
+        fontFamily = Inter,
+        fontWeight = FontWeight.Bold,
+        fontSize = 14.sp
+    ),
+    defaultFontFamily = Inter
+    /* Other default text styles to override
+    button = TextStyle(
+        fontFamily = FontFamily.Default,
+        fontWeight = FontWeight.W500,
+        fontSize = 14.sp
+    ),
+    caption = TextStyle(
+        fontFamily = FontFamily.Default,
+        fontWeight = FontWeight.Normal,
+        fontSize = 12.sp
+    )
+    */
+)
 @Composable
 fun LayoutsCodelabTheme(
     darkTheme: Boolean = isSystemInDarkTheme(),
