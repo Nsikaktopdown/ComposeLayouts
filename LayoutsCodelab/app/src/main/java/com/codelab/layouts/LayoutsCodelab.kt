@@ -27,16 +27,11 @@ import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.rememberScrollState
 import androidx.compose.foundation.shape.RoundedCornerShape
-import androidx.compose.material.Card
-import androidx.compose.material.Icon
-import androidx.compose.material.IconButton
-import androidx.compose.material.MaterialTheme
-import androidx.compose.material.Scaffold
-import androidx.compose.material.Text
-import androidx.compose.material.TopAppBar
+import androidx.compose.material.*
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.Favorite
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.CompositionLocalProvider
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
@@ -148,7 +143,6 @@ fun StaggeredGrid(
 fun Chip(modifier: Modifier = Modifier, text: String) {
     Card(
         modifier = modifier,
-        border = BorderStroke(color = Color.Black, width = Dp.Hairline),
         shape = RoundedCornerShape(8.dp)
     ) {
         Row(
@@ -165,6 +159,7 @@ fun Chip(modifier: Modifier = Modifier, text: String) {
         }
     }
 }
+
 
 @Preview
 @Composable

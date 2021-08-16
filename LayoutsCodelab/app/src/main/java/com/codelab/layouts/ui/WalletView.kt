@@ -21,7 +21,7 @@ fun balanceLayout() {
 
         Text(
             "$", Modifier.constrainAs(currency) {
-                top.linkTo(parent.top, margin = 16.dp)
+                //top.linkTo(parent.top, margin = 16.dp)
                 bottom.linkTo(balance.bottom)
 
             },
@@ -29,7 +29,7 @@ fun balanceLayout() {
             color = Color.White
         )
         Text(
-            "0", Modifier.constrainAs(balance) {
+            "4,000", Modifier.constrainAs(balance) {
                 top.linkTo(parent.top, margin = 16.dp)
                 start.linkTo(currency.end)
             },
@@ -38,7 +38,6 @@ fun balanceLayout() {
         )
         Text(
             ".0", Modifier.constrainAs(trailing) {
-                top.linkTo(parent.top, margin = 16.dp)
                 start.linkTo(balance.end)
                 bottom.linkTo(balance.bottom)
             },
@@ -115,6 +114,7 @@ fun WalletView() {
         }
         Spacer(modifier = Modifier.height(16.dp))
     }
+
 
 
 }
