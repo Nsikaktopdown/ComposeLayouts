@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.codelab.layouts.ui
+package com.nsikakthompson.bamboocompose.ui
 
 import android.os.Bundle
 import androidx.activity.compose.setContent
@@ -27,8 +27,10 @@ import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.compose.rememberNavController
-import com.codelab.layouts.R
-import com.codelab.layouts.tools.LayoutsCodelabTheme
+import com.nsikakthompson.bamboocompose.R
+import com.nsikakthompson.bamboocompose.tools.LayoutsCodelabTheme
+import com.nsikakthompson.bamboocompose.ui.widgets.BottomNavigationBar
+import com.nsikakthompson.bamboocompose.ui.widgets.Navigation
 
 class MainActivity : AppCompatActivity() {
 

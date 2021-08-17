@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.codelab.layouts.tools
+package com.nsikakthompson.bamboocompose.tools
 
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.Shapes

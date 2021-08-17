@@ -1,4 +1,4 @@
-package com.codelab.layouts.ui.widgets
+package com.nsikakthompson.bamboocompose.ui.widgets
 
 import androidx.compose.foundation.Image
 import androidx.compose.foundation.layout.*
@@ -11,7 +11,7 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.dp
 import androidx.compose.ui.unit.sp
 import androidx.constraintlayout.compose.ConstraintLayout
-import com.codelab.layouts.R
+import com.nsikakthompson.bamboocompose.R
 
 
 data class StockItem(var icon: Int, var name: String, val symbol: String, var amount: String)
@@ -19,21 +19,23 @@ data class StockItem(var icon: Int, var name: String, val symbol: String, var am
 @Composable
 fun stockItem(stockImage: Int, name: String, symbol: String, amount: String) {
     ConstraintLayout(
-        Modifier.fillMaxWidth()
-
-
+        Modifier
+            .fillMaxWidth()
+            .padding(8.dp)
     ) {
         val (iconId, symbolId, amountId) = createRefs()
 
         Row(Modifier.constrainAs(iconId) {
             start.linkTo(parent.start)
+            top.linkTo(parent.top)
+            bottom.linkTo(parent.bottom)
         }) {
             Image(
                 painter = painterResource(id = stockImage),
                 contentDescription = null,
                 Modifier
-                    .height(40.dp)
-                    .width(40.dp)
+                    .height(35.dp)
+                    .width(35.dp)
             )
             Spacer(Modifier.width(20.dp))
         }
@@ -42,12 +44,12 @@ fun stockItem(stockImage: Int, name: String, symbol: String, amount: String) {
         }) {
             Text(
                 symbol,
-                style = MaterialTheme.typography.body2.copy(fontSize = 18.sp)
+                style = MaterialTheme.typography.body2.copy(fontSize = 16.sp)
             )
             Spacer(Modifier.height(3.dp))
             Text(
                 name,
-                style = MaterialTheme.typography.body2.copy(fontSize = 14.sp)
+                style = MaterialTheme.typography.body2.copy(fontSize = 12.sp)
             )
         }
         Row(

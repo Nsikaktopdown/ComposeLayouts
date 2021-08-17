@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.codelab.layouts.tools
+package com.nsikakthompson.bamboocompose.tools
 
 import androidx.compose.foundation.isSystemInDarkTheme
 import androidx.compose.material.MaterialTheme
@@ -27,7 +27,7 @@ import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
-import com.codelab.layouts.R
+import com.nsikakthompson.bamboocompose.R
 
 
 val Inter = FontFamily(

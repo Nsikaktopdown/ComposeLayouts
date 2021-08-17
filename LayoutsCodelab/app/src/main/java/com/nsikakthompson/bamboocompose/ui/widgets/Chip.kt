@@ -1,4 +1,4 @@
-package com.codelab.layouts.ui.widgets
+package com.nsikakthompson.bamboocompose.ui.widgets
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -13,10 +13,10 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 
 @Composable
-fun Chip( text: String, color: Color) {
+fun Chip(text: String, color: Color) {
 
     Surface(
-        Modifier.padding(10.dp),
+        Modifier.padding(5.dp),
         shape = RoundedCornerShape(4.dp),
         color = color.copy(alpha = 0.5f)
     )

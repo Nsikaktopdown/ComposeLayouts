@@ -1,16 +1,20 @@
-package com.codelab.layouts.ui
+package com.nsikakthompson.bamboocompose.ui.widgets
 
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.NavController
+import androidx.navigation.NavDestination.Companion.hierarchy
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
-import com.codelab.layouts.ui.screens.WalletScreen
-import com.codelab.layouts.ui.screens.WatchScreen
+import androidx.navigation.compose.currentBackStackEntryAsState
+import com.nsikakthompson.bamboocompose.ui.NavigationItem
+import com.nsikakthompson.bamboocompose.ui.screens.WalletScreen
+import com.nsikakthompson.bamboocompose.ui.screens.WatchScreen
 
 
 @Composable
@@ -26,6 +30,9 @@ fun BottomNavigationBar(navController: NavController) {
         backgroundColor = Color.White,
         contentColor = Color.White
     ) {
+        val navBackStackEntry by navController.currentBackStackEntryAsState()
+        val currentRoute = navBackStackEntry?.destination
+
         items.forEach { item ->
             BottomNavigationItem(
                 icon = { Icon(painterResource(id = item.icon), contentDescription = item.title) },
@@ -33,7 +40,7 @@ fun BottomNavigationBar(navController: NavController) {
                 selectedContentColor = MaterialTheme.colors.primary,
                 unselectedContentColor = Color.Gray,
                 alwaysShowLabel = true,
-                selected = false,
+                selected = currentRoute?.hierarchy?.any { it.route == item.route } == true,
                 onClick = {
                     navController.navigate(item.route) {
                         // Pop up to the start destination of the graph to

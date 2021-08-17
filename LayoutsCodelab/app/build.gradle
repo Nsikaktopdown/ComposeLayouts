@@ -23,7 +23,7 @@ android {
     compileSdkVersion 30
 
     defaultConfig {
-        applicationId "com.codelab.layouts"
+        applicationId "com.nsikakthompson.bamboocompose"
         minSdkVersion 21
         targetSdkVersion 30
         versionCode 1

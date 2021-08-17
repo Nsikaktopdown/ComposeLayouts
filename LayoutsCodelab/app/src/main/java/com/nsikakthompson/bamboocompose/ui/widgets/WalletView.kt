@@ -1,7 +1,9 @@
-package com.codelab.layouts.ui.widgets
+package com.nsikakthompson.bamboocompose.ui.widgets
 
+import androidx.compose.foundation.ScrollState
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
+import androidx.compose.foundation.verticalScroll
 import androidx.compose.material.*
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -22,7 +24,7 @@ fun balanceLayout() {
         Text(
             "$", Modifier.constrainAs(currency) {
                 //top.linkTo(parent.top, margin = 16.dp)
-                bottom.linkTo(balance.bottom)
+                bottom.linkTo(balance.bottom, margin = 4.dp)
 
             },
             style = MaterialTheme.typography.body1,
@@ -39,7 +41,7 @@ fun balanceLayout() {
         Text(
             ".0", Modifier.constrainAs(trailing) {
                 start.linkTo(balance.end)
-                bottom.linkTo(balance.bottom)
+                bottom.linkTo(balance.bottom,margin = 4.dp)
             },
             style = MaterialTheme.typography.body1,
             color = Color.White
