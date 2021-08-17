@@ -1,4 +1,4 @@
-package com.codelab.layouts.ui
+package com.codelab.layouts.ui.widgets
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.*
@@ -104,7 +104,7 @@ fun WalletView() {
                 style = MaterialTheme.typography.body2,
             )
         }
-        Spacer(modifier = Modifier.height(10.dp))
+        Spacer(modifier = Modifier.height(16.dp))
         Button(colors = ButtonDefaults.buttonColors(
             backgroundColor = Color.White
         ), onClick = { /*TODO*/ }) {
@@ -112,7 +112,7 @@ fun WalletView() {
 
 
         }
-        Spacer(modifier = Modifier.height(16.dp))
+        Spacer(modifier = Modifier.height(30.dp))
     }
 
 
